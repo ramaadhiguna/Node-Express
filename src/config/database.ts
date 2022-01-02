@@ -1,7 +1,11 @@
-const mongoose = require('mongoose');
-const url = ``; //URImu dek kene lol
+import { connect } from 'mongoose'
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+const url = process.env.ATLAS_URI || '';
+
 const connectDB = async () => {
-  const conn = await mongoose.connect(url, {
+  const conn = await connect(url, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
@@ -11,4 +15,4 @@ const connectDB = async () => {
   console.log(`MongoDB Connected: ${conn.connection.host}`);
 };
 
-module.exports = connectDB; 
+export default connectDB;
