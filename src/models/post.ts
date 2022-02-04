@@ -15,5 +15,4 @@ const postSchema = new Schema<IPost>({
   }
 }, {timestamps:true});
 
-const Post = model<IPost>('Post', postSchema);
-module.exports = Post;
+export const Post = model<IPost>('User', postSchema);

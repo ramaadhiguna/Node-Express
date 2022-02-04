@@ -11,10 +11,13 @@
   "author": "Brad Traversy",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.16.11",
     "@babel/preset-flow": "^7.14.5",
+    "@babel/preset-typescript": "^7.16.7",
     "dotenv": "^8.2.0",
     "express": "^4.15.3",
     "lodash": "^4.17.21",
+    "mockingoose": "^2.15.2",
     "mongoose": "^5.7.7",
     "pug": "^2.0.0-rc.1",
     "ts-node": "^10.2.1"
@@ -23,6 +26,7 @@
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.0.2",
+    "@types/mockingoose": "^2.13.0",
     "jest": "^27.2.2",
     "supertest": "^6.1.6"
   },
@@ -32,7 +36,7 @@
       "/node_modules/"
     ],
     "transform": {
-      "^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
+      "^.+\\.(ts|tsx|js|jsx)$": "babel-jest"
     }
   }
 }
