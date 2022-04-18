@@ -15,4 +15,4 @@ const postSchema = new Schema<IPost>({
   }
 }, {timestamps:true});
 
-export const Post = model<IPost>('User', postSchema);
+export const Post = model<IPost>('Post', postSchema);

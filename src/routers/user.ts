@@ -18,14 +18,14 @@ userRouter.route('/:id').get(async (req,res) =>{
 userRouter.route('/').post(async (req,res) =>{
     const newUser : IUser = new User(req.body);
     newUser.save()
-    .then(()=> res.status(200).json("result"))
+    .then(result => res.status(200).json(result))
     .catch(err => res.status(400).json(err))
 });
 
 userRouter.route('/:id').post(async (req,res) =>{
     const newUser : IUser = new User(req.body);
     newUser.save()
-    .then(()=> res.status(200).json("result"))
+    .then(result => res.status(200).json(result))
     .catch(err => res.status(400).json(err))
 });
 
