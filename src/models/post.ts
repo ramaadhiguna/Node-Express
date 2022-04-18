@@ -1,5 +1,5 @@
 import { model, Schema} from 'mongoose';
-import { IPost } from './interface';
+import { IPost } from '../types/interface';
 
 const postSchema = new Schema<IPost>({
   title: {

@@ -1,7 +1,6 @@
 import { model, Schema } from 'mongoose'
-import { IUser } from './interface';
+import { IUser } from '../types/interface';
 
-// Article Schema
 const userSchema = new Schema<IUser>({
   username: {
     type: String,
